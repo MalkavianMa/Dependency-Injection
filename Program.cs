@@ -57,13 +57,13 @@ namespace Dependency_Injection
             pg.GetValue(out x, out y);
             Console.WriteLine("x={0},y={1}", x, y);
             #region  encode默认编码
-            //string a = "abcde某某某";
-            //int m = 1, n = 1,s;
+            string a = "abcde某某某";
+            int m = 1, n = 1, s;
 
-            //m = a.Length;
-            //n = System.Text.Encoding.Default.GetBytes(a).Length;
+            m = a.Length;
+            n = System.Text.Encoding.Default.GetBytes(a).Length;
 
-            //Console.WriteLine("m {0}  n {1}",m,n); 
+            Console.WriteLine("m {0}  n {1}", m, n);
             #endregion
             #region 赋值问题 对象指向
             //Person person1 = new Person();
