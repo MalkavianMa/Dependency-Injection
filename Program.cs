@@ -38,6 +38,32 @@ namespace Dependency_Injection
         {
 
 
+            int temp = 0;
+            int[] arrA = { 2, 8, 1, 3 };
+            int countN = 0;
+            for (int i = 0; i < arrA.Length - 1; i++)//外层循环三次
+            {
+                for (int j = 0; j < arrA.Length - 1 - i; j++)//内层 3次 2次 1次
+                {
+                    countN++;
+                    if (arrA[j] > arrA[j + 1])
+                    {
+                        temp = arrA[j];
+                        arrA[j] = arrA[j + 1];
+                        arrA[j + 1] = temp;
+                    }
+                }
+            }
+            Console.WriteLine(countN);
+
+            foreach (var item in arrA)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            Console.ReadKey();
+
             Program pg = new Program();
             int x;
             int y;
@@ -124,7 +150,7 @@ namespace Dependency_Injection
 
         public void GetRefValue(ref int x, ref int y)
         {
-            
+
         }
 
         public void GetValue(out int x, out int y)
